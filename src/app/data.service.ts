@@ -31,6 +31,7 @@ export class DataService {
   updateVideoKey(key: any) {
     this.videoKey.next(key);
   }
+  
   getVideoKey() {
     return this.videoKey.getValue();
   }

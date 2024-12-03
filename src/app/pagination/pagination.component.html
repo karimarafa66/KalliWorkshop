@@ -22,11 +22,12 @@
     </div>
   </div>
   <div class="pagination d-flex flex-column flex-md-row justify-content-center mt-4 mt-md-0">
-    <div class="left-right d-flex justify-content-between align-items-center">
+    <div class="left-right d-flex justify-content-between align-items-center mx-5">
       <i class="bi bi-arrow-left me-3 fs-3" style="cursor: pointer;" (click)="updateIndexLeft()"></i>
+
       <i class="bi bi-arrow-right me-3 fs-3" style="cursor: pointer;" (click)="updateIndexRight()"></i>
     </div>
-    <div class="dots d-flex align-items-center justify-content-center mt-3 mt-md-0">
+    <div class="dots d-flex align-items-center justify-content-center mt-3 mt-md-0 ">
       <h6 class="me-2">0{{ currentIndex + 1 }}</h6>
       <ng-container *ngFor="let dat of data; let i = index">
         <i

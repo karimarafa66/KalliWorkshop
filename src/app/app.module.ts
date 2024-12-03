@@ -19,6 +19,8 @@ import * as Hammer from 'hammerjs';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ToastrModule } from 'ngx-toastr';
 
+
+
 export class MyHammerConfig extends HammerGestureConfig {
   override overrides = {
     swipe: { direction: Hammer.DIRECTION_HORIZONTAL },
@@ -31,6 +33,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     NavbarComponent,
     ProductComponent,
     PaginationComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,9 @@ export class MyHammerConfig extends HammerGestureConfig {
     HammerModule,
     YouTubePlayerModule,
     ToastrModule.forRoot({
-      preventDuplicates: true,
+      // preventDuplicates: true,
+      positionClass: 'toast-top-right',
+      timeOut: 3000,
     }),
   ],
   providers: [

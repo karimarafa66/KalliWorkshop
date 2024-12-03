@@ -22,11 +22,11 @@ ngOnInit(): void {
 restNotice(){
   this.DataService.updateNotice(0)
   this.notice=0
-  this.toastr.info(
+  this.toastr.success(
     'all items removed form Cart list',
     'Cart',
     {
-      positionClass: 'toast-top-center',
+      positionClass: 'toast-top-right',
     }
   );
 }

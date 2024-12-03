@@ -106,7 +106,7 @@ export class PaginationComponent implements OnInit, AfterViewInit, OnDestroy {
         'this item added to favorite list success',
         'Favorite',
         {
-          positionClass: 'toast-top-center',
+          positionClass: 'toast-top-right',
         }
       );
     } else {
@@ -114,19 +114,22 @@ export class PaginationComponent implements OnInit, AfterViewInit, OnDestroy {
         'this item removed form favorite list success',
         'Favorite',
         {
-          positionClass: 'toast-top-center',
+          positionClass: 'toast-top-right',
         }
       );
     }
   }
   addToCart() {
     this.cart = !this.cart;
-
+    this.cart = !this.cart;
+    // this.toastr.success('This item added to the Cart successfully!', 'Cart');
+    // this.notice++;
+    // this.DataService.updateNotice(this.notice);
       this.toastr.success(
         'this item added to Cart list success',
         'Cart',
         {
-          positionClass: 'toast-top-center',
+          positionClass: 'toast-top-right',
         }
       );
 
@@ -138,6 +141,7 @@ export class PaginationComponent implements OnInit, AfterViewInit, OnDestroy {
     console.log(this.notice);
 
   }
+
   ngOnDestroy() {
     this.currentIndexSubscription.unsubscribe();
   }

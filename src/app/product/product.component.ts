@@ -1,3 +1,4 @@
+
 import { CurrentIndexService } from './../current-index.service';
 import {
   AfterViewChecked,
